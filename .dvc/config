@@ -1,4 +1,0 @@
-['remote "s3"']
-    url = s3://sem3-repro/ctr-project-train/
-    endpointurl = https://hb.ru-msk.vkcs.cloud
-    region = ru-msk
