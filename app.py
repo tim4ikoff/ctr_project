@@ -35,16 +35,6 @@ class ClickResponse(BaseModel):
 
 
 app = FastAPI()
-Instrumentator().instrument(app).expose(app)
-proba_gauge = Gauge("predicted_proba", "Predicted price")
-predict_request_counter = Counter(
-    "http_predict_request_total", "Total HTTP Predict Requests"
-)
-proba_hist = Histogram(
-    "predicted_proba_hist",
-    "Histogram of predicted click probas",
-    buckets=[0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95],
-)
 
 
 @app.get("/")
@@ -128,4 +118,4 @@ def predict(request: AdOpportunity):
 
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=os.getenv("PORT", 8000))
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)
