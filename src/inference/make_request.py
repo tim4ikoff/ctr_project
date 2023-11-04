@@ -17,7 +17,7 @@ logger.addHandler(handler)
 
 
 if __name__ == "__main__":
-    config_path = "configs/train_config.yaml"
+    config_path = r"C://Users/User/Desktop/Own projects/pythonProject/ctr_project-main/configs/train_config.yaml"
     training_pipeline_params: TrainingPipelineParams = read_training_pipeline_params(
         config_path
     )
